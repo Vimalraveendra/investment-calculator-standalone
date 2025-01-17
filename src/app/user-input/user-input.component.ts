@@ -12,4 +12,7 @@ export class UserInputComponent {
   @Input()initialInvestment='0';
   @Input()annualInvestment='0';
   @Input()expectedReturn='5';
+  @Input()duration='10';
+
+  onSubmit(){}
 }
