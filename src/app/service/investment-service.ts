@@ -7,6 +7,7 @@ import { IInvestmentInput, IInvestmentResult } from "../model/investment-input.m
 export class InvestmentService{
    private resultData=signal<IInvestmentResult[]|undefined>(undefined)
      allData=this.resultData.asReadonly();
+     
 
      calculateInvestmentResults(data:IInvestmentInput) {
         const {initialInvestment,annualInvestment,duration,expectedReturn} = data
@@ -28,7 +29,7 @@ export class InvestmentService{
             totalAmountInvested: initialInvestment + annualInvestment * year,
           });
         }
-      
+        console.log("all",annualData)
         // this.resultData=annualData;
         this.resultData.set(annualData);
       }
