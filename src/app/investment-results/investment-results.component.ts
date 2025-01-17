@@ -1,19 +1,16 @@
 import { Component,computed,inject, OnInit } from '@angular/core';
 import { InvestmentService } from '../service/investment-service';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-investment-results',
   standalone: true,
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './investment-results.component.html',
   styleUrl: './investment-results.component.css'
 })
-export class InvestmentResultsComponent  implements OnInit{
+export class InvestmentResultsComponent {
   private investmentService=inject(InvestmentService)
   resultData=computed(()=>this.investmentService.allData())
-
-  ngOnInit(): void {
-      console.log("reuslt",this.resultData())
-  }
 
 }
