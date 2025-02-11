@@ -3,18 +3,9 @@
     <app-form-input label="initial-investment">
       <input type="number" id="initial-investment" name="initial-investment" [(ngModel)]="initialInvestment" />
     </app-form-input>
-    <!-- <app-form-input type="number" name="initial-investment" [(ngModel)]="initialInvestment" /> -->
-    <!-- <p>
-      <label for="initial-investment"></label>
-      <input type="number" id="initial-investment" name="initial-investment" [(ngModel)]="initialInvestment" />
-    </p> -->
     <app-form-input label="annual-investment">
       <input type="number" id="annual-investment" name="annual-investment" [(ngModel)]="annualInvestment" />
     </app-form-input>
-    <!-- <p>
-      <label for="annual-investment"></label>
-      <input type="number" id="annual-investment" name="annual-investment" [(ngModel)]="annualInvestment" />
-    </p> -->
   </div>
   <div class="input-group">
     <app-form-input label="expected-return">
@@ -23,18 +14,9 @@
     <app-form-input label="duration">
       <input type="number" id="duration" name="duration" [(ngModel)]="duration" />
     </app-form-input>
-
-    <!-- <p>
-      <label for="expected-return"></label>
-      <input type="number" id="expected-return" name="expected-return" [(ngModel)]="expectedReturn" />
-    </p>
-
-    <p>
-      <label for="duration"></label>
-      <input type="number" id="duration" name="duration" [(ngModel)]="duration" />
-    </p> -->
   </div>
-  <p>
+  <p class="button-container">
     <button type="submit">Calculate</button>
+    <button type="btn" (click)="clearCalculation()">Clear</button>
   </p>
 </form>

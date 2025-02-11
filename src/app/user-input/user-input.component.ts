@@ -30,5 +30,9 @@ export class UserInputComponent {
     this.expectedReturn.set('5'),
     this.duration.set('10')
   }
+
+  clearCalculation(){
+     this.investmentService.handleClearCalculation()
+  }
   }
 

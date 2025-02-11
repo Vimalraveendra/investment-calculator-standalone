@@ -29,9 +29,11 @@ export class InvestmentService{
             totalAmountInvested: initialInvestment + annualInvestment * year,
           });
         }
-        console.log("all",annualData)
         // this.resultData=annualData;
         this.resultData.set(annualData);
+      }
+      handleClearCalculation(){
+          this.resultData.set([])
       }
 
 }
